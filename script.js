@@ -1,51 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('leadForm');
-    const successMessage = document.getElementById('formSuccess');
+    const successBanner = document.getElementById('formSuccess');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent actual form submission
-        let isValid = true;
+    if (!form) return;
 
-        // Form fields
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        let isFormValid = true;
 
-        // Validation helpers
-        const showError = (input, show) => {
-            const errorMsg = document.getElementById(`${input.id}Error`);
-            if (show) {
-                input.classList.add('input-error');
-                errorMsg.style.display = 'block';
-                isValid = false;
+        const nameInput = document.getElementById('fullName');
+        const emailInput = document.getElementById('emailAddr');
+        const msgInput = document.getElementById('projectMsg');
+
+        // Field Validation Function
+        const validateField = (input, errorId, condition) => {
+            const errorElement = document.getElementById(errorId);
+            if (condition) {
+                input.classList.add('invalid');
+                if (errorElement) errorElement.style.display = 'block';
+                isFormValid = false;
             } else {
-                input.classList.remove('input-error');
-                errorMsg.style.display = 'none';
+                input.classList.remove('invalid');
+                if (errorElement) errorElement.style.display = 'none';
             }
         };
 
+        // Regex for valid email
         const isValidEmail = (email) => {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         };
 
-        // Name validation
-        showError(nameInput, nameInput.value.trim() === '');
+        // Run validations
+        validateField(nameInput, 'nameError', nameInput.value.trim() === '');
+        validateField(emailInput, 'emailError', !isValidEmail(emailInput.value.trim()));
+        validateField(msgInput, 'msgError', msgInput.value.trim() === '');
 
-        // Email validation
-        showError(emailInput, !isValidEmail(emailInput.value.trim()));
-
-        // Message validation
-        showError(messageInput, messageInput.value.trim() === '');
-
-        // If everything is valid, simulate success
-        if (isValid) {
-            successMessage.classList.remove('hidden');
+        // Handle success
+        if (isFormValid) {
+            successBanner.classList.remove('hidden');
             form.reset();
-            
-            // Hide success message after 5 seconds
+
             setTimeout(() => {
-                successMessage.classList.add('hidden');
+                successBanner.classList.add('hidden');
             }, 5000);
         }
     });
