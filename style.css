@@ -71,8 +71,13 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; height: 72px; }
 .logo { font-size: 1.25rem; font-weight: 800; color: var(--primary); }
-.nav-links { display: flex; gap: 2rem; font-weight: 500; }
-.nav-links a:hover { color: var(--accent); }
+.nav-links a { 
+    padding: 0.5rem; /* Expands the tap target area */
+    display: inline-block;
+}
+.nav-links a:hover { 
+    color: var(--accent); 
+}
 
 /* --- Hero Section --- */
 .hero { text-align: center; padding: 8rem 0; }
