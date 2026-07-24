@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>North Peak Digital | Growth Agency</title>
-    <meta name="description" content="North Peak Digital helps brands scale with data-driven marketing and engineering.">
+    <meta name="theme-color" content="#0f172a">
+    <title>North Peak Digital | Scale Your Digital Presence</title>
+    <meta name="description" content="North Peak Digital provides top-tier full-stack development, technical SEO, and conversion optimization for high-growth brands.">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
     <!-- Navigation -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">North Peak Digital</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#results">Results</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo" aria-label="North Peak Digital Home">North Peak Digital</a>
+            <nav class="site-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#results" class="nav-link">Results</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 </ul>
             </nav>
             <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
@@ -25,10 +28,10 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero section">
-            <div class="container hero-content">
-                <h1>Scale Your Digital Presence to the Peak</h1>
-                <p>We combine elite engineering with data-driven marketing to build and scale your digital platforms.</p>
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <h1 class="hero-title">Scale Your Digital Presence to the Peak</h1>
+                <p class="hero-description">We combine elite engineering with data-driven marketing to build, optimize, and scale web applications for high-growth brands.</p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
                     <a href="#services" class="btn btn-secondary">Explore Services</a>
@@ -36,133 +39,135 @@
             </div>
         </section>
 
-        <!-- Services Section (Grid of 6) -->
-        <section id="services" class="services section bg-light">
+        <!-- Services Section (6 Grid Items) -->
+        <section id="services" class="section bg-light">
             <div class="container">
                 <h2 class="section-title">Our Capabilities</h2>
                 <div class="grid services-grid">
-                    <div class="card service-card">
+                    <article class="card">
                         <h3>Full-Stack Development</h3>
-                        <p>End-to-end web applications built for speed, scale, and security.</p>
-                    </div>
-                    <div class="card service-card">
-                        <h3>E-Commerce Optimization</h3>
-                        <p>Shopify and headless commerce solutions that maximize conversion rates.</p>
-                    </div>
-                    <div class="card service-card">
+                        <p>Scalable web applications engineered with modern standards, high performance, and robust security.</p>
+                    </article>
+                    <article class="card">
+                        <h3>E-Commerce Architecture</h3>
+                        <p>High-converting Shopify and custom storefronts optimized for speed and maximum checkout yield.</p>
+                    </article>
+                    <article class="card">
                         <h3>Technical SEO</h3>
-                        <p>Algorithmic alignment and site architecture to dominate search rankings.</p>
-                    </div>
-                    <div class="card service-card">
-                        <h3>Performance Marketing</h3>
-                        <p>High-ROI paid campaigns across social and search networks.</p>
-                    </div>
-                    <div class="card service-card">
-                        <h3>UI/UX Design</h3>
-                        <p>Frictionless interfaces that turn visitors into loyal customers.</p>
-                    </div>
-                    <div class="card service-card">
+                        <p>Core Web Vitals optimization, semantic structure, and search engine visibility enhancements.</p>
+                    </article>
+                    <article class="card">
                         <h3>Conversion Rate Optimization</h3>
-                        <p>A/B testing and analytics to squeeze more revenue from existing traffic.</p>
-                    </div>
+                        <p>Data-backed A/B testing, user journey mapping, and interface optimization to boost revenue.</p>
+                    </article>
+                    <article class="card">
+                        <h3>UI/UX Interface Design</h3>
+                        <p>Accessible, mobile-first design systems built around seamless user experiences and clear hierarchy.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Performance Engineering</h3>
+                        <p>Database query tuning, script deferral, asset compression, and edge caching for sub-second loads.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Results / Testimonials Section -->
-        <section id="results" class="results section">
+        <section id="results" class="section">
             <div class="container">
-                <h2 class="section-title">Client Results</h2>
+                <h2 class="section-title">Proven Results</h2>
                 <div class="grid results-grid">
                     <blockquote class="testimonial-card">
-                        <p>"North Peak rebuilt our checkout flow and our conversion rate jumped by 34% in two weeks. Absolute professionals."</p>
-                        <footer>— Sarah Jenkins, VP of Growth at TechNova</footer>
+                        <p>"North Peak modernized our web platform and increased our conversion rate by 34% within 14 days."</p>
+                        <cite>— Sarah Jenkins, VP of Growth</cite>
                     </blockquote>
                     <blockquote class="testimonial-card">
-                        <p>"They don't just write code; they understand the commercial goals behind the software. The best agency we've worked with."</p>
-                        <footer>— Marcus Thorne, Founder of Apex Retail</footer>
+                        <p>"Their attention to mobile performance and technical SEO doubled our organic search traffic."</p>
+                        <cite>— Marcus Thorne, Founder</cite>
                     </blockquote>
                 </div>
             </div>
         </section>
 
         <!-- Pricing Section (3 Tiers) -->
-        <section id="pricing" class="pricing section bg-light">
+        <section id="pricing" class="section bg-light">
             <div class="container">
                 <h2 class="section-title">Transparent Pricing</h2>
                 <div class="grid pricing-grid">
                     <div class="card pricing-card">
                         <h3>Starter</h3>
-                        <div class="price">$2,500<span>/mo</span></div>
-                        <ul class="pricing-features">
-                            <li>Basic SEO Audit</li>
+                        <p class="price">$2,500<span>/mo</span></p>
+                        <ul class="tier-features">
+                            <li>Technical Audit</li>
                             <li>Monthly Reporting</li>
                             <li>Up to 10hrs Development</li>
                         </ul>
-                        <a href="#contact" class="btn btn-secondary w-100">Choose Starter</a>
+                        <a href="#contact" class="btn btn-secondary full-width">Select Starter</a>
                     </div>
-                    <div class="card pricing-card popular">
-                        <div class="badge">Most Popular</div>
+                    <div class="card pricing-card featured">
+                        <span class="badge">Most Popular</span>
                         <h3>Growth</h3>
-                        <div class="price">$5,500<span>/mo</span></div>
-                        <ul class="pricing-features">
+                        <p class="price">$5,500<span>/mo</span></p>
+                        <ul class="tier-features">
                             <li>Advanced SEO & Paid Ads</li>
-                            <li>Weekly Strategy Calls</li>
+                            <li>Weekly Strategy Sync</li>
                             <li>Up to 25hrs Development</li>
                             <li>Priority Support</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary w-100">Choose Growth</a>
+                        <a href="#contact" class="btn btn-primary full-width">Select Growth</a>
                     </div>
                     <div class="card pricing-card">
                         <h3>Enterprise</h3>
-                        <div class="price">Custom</div>
-                        <ul class="pricing-features">
+                        <p class="price">Custom</p>
+                        <ul class="tier-features">
                             <li>Dedicated Account Manager</li>
-                            <li>Custom Tech Integrations</li>
-                            <li>Unlimited Development Hours</li>
-                            <li>24/7 SLA</li>
+                            <li>Custom Tech Integration</li>
+                            <li>Unlimited Engineering</li>
+                            <li>24/7 SLA Guarantee</li>
                         </ul>
-                        <a href="#contact" class="btn btn-secondary w-100">Contact Sales</a>
+                        <a href="#contact" class="btn btn-secondary full-width">Contact Sales</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Form Section -->
-        <section id="contact" class="contact section">
-            <div class="container contact-container">
-                <h2 class="section-title">Let's Build Something</h2>
+        <!-- Contact Section with Validation -->
+        <section id="contact" class="section">
+            <div class="container form-container">
+                <h2 class="section-title">Let's Build Together</h2>
                 <form id="leadForm" class="contact-form" novalidate>
-                    <div class="form-group">
-                        <label for="name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="Jane Doe">
-                        <span class="error-message" id="nameError">Please enter your name.</span>
+                    <div class="form-field">
+                        <label for="fullName">Full Name <span class="req">*</span></label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Jane Doe" autocomplete="name">
+                        <span class="error-msg" id="nameError">Please enter your full name.</span>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Work Email <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="jane@company.com">
-                        <span class="error-message" id="emailError">Please enter a valid email.</span>
+
+                    <div class="form-field">
+                        <label for="emailAddr">Work Email <span class="req">*</span></label>
+                        <input type="email" id="emailAddr" name="emailAddr" required placeholder="jane@company.com" autocomplete="email">
+                        <span class="error-msg" id="emailError">Please enter a valid work email.</span>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Project Details <span class="required">*</span></label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Tell us about your goals..."></textarea>
-                        <span class="error-message" id="messageError">Please provide project details.</span>
+
+                    <div class="form-field">
+                        <label for="projectMsg">Project Scope <span class="req">*</span></label>
+                        <textarea id="projectMsg" name="projectMsg" rows="4" required placeholder="Describe your timeline and goals..."></textarea>
+                        <span class="error-msg" id="msgError">Please enter project details.</span>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                    <div id="formSuccess" class="success-message hidden">Thanks! We'll be in touch within 24 hours.</div>
+
+                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                    <div id="formSuccess" class="success-banner hidden" role="alert">Thank you! Your message has been received.</div>
                 </form>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Required Footer -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="container footer-content">
             <p>&copy; 2026 North Peak Digital. All rights reserved.</p>
             <p class="credit">Built for Digital Heroes Training Task. Visit <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer">digitalheroesco.com</a></p>
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
 </body>
 </html>
